@@ -1,0 +1,30 @@
+spring:
+#  profiles:
+#    default: Qc
+  
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  
+  application:
+    name: usm
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    password: root
+#    url: jdbc:mysql://localhost:3306/java_project_exp_practice
+#    username: root
+server:
+  servlet:
+    context-path: /usm
+  port: 8082
+
+logging:
+  file:
+#    path: :
+    name: usm.log
+  pattern:
+    console: "%d{YYYY-MM-dd HH:mm:ss} [%thread] %5level %logger{36} - %msg%n"
+  level:
+    com.jsp.usm: info
+
