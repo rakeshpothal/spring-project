@@ -13,14 +13,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-/**its a entity class which will be stored in the database
+/**
+ * its a entity class which will be stored in the database
  * 
  */
 @Data
 @Entity
 @Table(name = "entity_model_info")
 public class EntityModel {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "alt_key", columnDefinition = "BIGINT")

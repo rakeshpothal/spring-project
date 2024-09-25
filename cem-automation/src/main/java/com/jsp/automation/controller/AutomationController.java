@@ -17,7 +17,7 @@ import jakarta.persistence.Converter;
 
 @RestController
 public class AutomationController {
-	
+
 	@Autowired
 	AutomationService automationService;
 
@@ -36,10 +36,5 @@ public class AutomationController {
 	public EntityDto getEntityByentityCode(String entityCode) {
 		return automationService.findByEntityCode(entityCode);
 	}
-	
-	@PostMapping(value = "/postrequest")
-	public void postRequest(@RequestBody  EntityDto entityDto) {
-		System.out.println("here");
-		System.out.println(entityDto);
-	}
+
 }
