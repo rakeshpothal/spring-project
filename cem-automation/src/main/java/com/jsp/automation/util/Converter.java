@@ -7,6 +7,13 @@ import org.springframework.stereotype.Component;
 
 import jakarta.persistence.AttributeConverter;
 
+/**
+ * converter class is used to convert list<string> to string and reverse
+ * its impliments {@link AttributeConverter} interface
+ * with two overridden method
+ *  @convertToDatabaseColumn(String attribute)
+ *  @convertToEntityAttribute(String dbData)
+ */
 @Component
 public class Converter implements AttributeConverter<List<String>, String> {
 

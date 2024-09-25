@@ -74,7 +74,7 @@ public class DbConfig {
 	 * @param entityManagerFactory
 	 * @return {@link TransactionManager}
 	 */
-	@Bean(name = "gettransactionManagement")
+	@Bean(name = "transactionManager")
 	public JpaTransactionManager gettransactionManagement(EntityManagerFactory entityManagerFactory) {
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
 		transactionManager.setEntityManagerFactory(entityManagerFactory);
