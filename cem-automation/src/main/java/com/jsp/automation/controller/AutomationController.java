@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.jsp.automation.constant.MappingConstant;
+import com.jsp.automation.constant.MappingConstantForEntityModel;
 import com.jsp.automation.dto.EntityDto;
 import com.jsp.automation.service.AutomationService;
 
@@ -21,18 +21,18 @@ public class AutomationController {
 	@Autowired
 	AutomationService automationService;
 
-	@PostMapping(value = MappingConstant.SAVE_ENTITY_MODEL)
+	@PostMapping(value = MappingConstantForEntityModel.SAVE_ENTITY_MODEL)
 	public void saveEntityModel(@RequestBody EntityDto entityDto) {
 		automationService.saveEntityModel(entityDto);
 //		System.out.println("here");
 	}
 
-	@GetMapping(value = MappingConstant.GET_ENTITY_MODEL)
+	@GetMapping(value = MappingConstantForEntityModel.GET_ENTITY_MODEL)
 	public List<EntityDto> getEntityModel() {
 		return automationService.getEntityModel();
 	}
 
-	@GetMapping(value = MappingConstant.GET_ENTITY_MODEL_BY_MODEL_CODE)
+	@GetMapping(value = MappingConstantForEntityModel.GET_ENTITY_MODEL_BY_MODEL_CODE)
 	public EntityDto getEntityByentityCode(String entityCode) {
 		return automationService.findByEntityCode(entityCode);
 	}

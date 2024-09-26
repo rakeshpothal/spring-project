@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -69,6 +70,19 @@ public class RegisterServiceImplTest {
 		assertEquals(list, getuserByCityAndName);
 	}
 	
+//	@Test
+//	public void testGetAllUsersByDataList() {
+//		List<Map<String, Object>> list = new ArrayList<RegisterEntity>();
+//		RegisterEntity registerEntity = new RegisterEntity();
+//		list.add(registerEntity);
+//		
+//		
+//		List<String> dataList = new ArrayList<String>();
+//		dataList.add(anyString());
+//		dataList.add(anyString());
+//		when(mySqlRepository.getUserByEmailAndNameList(dataList)).thenReturn(list);
+//		List<RegisterEntity> allUsers = registerServiceImpl.getAllUsers(dataList);
+//	}
 
 	@Test
 	public void testSaveUser() {
