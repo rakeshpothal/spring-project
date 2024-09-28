@@ -1,6 +1,7 @@
 package com.jsp.automation.service;
 
 import java.util.Date;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,29 +28,61 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 	 * @param workFlowDto
 	 */
 	@Override
-	public void prepareAndUpdate(WorkFlowDto dto) {
-		WorkFlowEntity workFlowEntity = workFlowRepository.findByWfIdAndStstusFlag(dto.getWfId(), "DRAFT");
+	public void prepareAndUpdateWorkFlow(WorkFlowDto dto) {
+		WorkFlowEntity workFlowEntity = workFlowRepository.findByWfIdAndStatusFlag(dto.getWfId(), "DRAFT");
 		if (workFlowEntity == null) {
 			// create new workflow entity
 
-			WorkFlowEntity flowEntity = new WorkFlowEntity();
-			flowEntity.setCreatedDate(new Date());
-			flowEntity.setEntityCode(dto.getEntityCode());
-			flowEntity.setSourceData(dto.getSourceData());
-			flowEntity.setUniqueField(dto.getUniqueField());
-			flowEntity.setWfCode(dto.getWfId() + "_0");
-			flowEntity.setWfId(dto.getWfId());
-			flowEntity.setWfName(dto.getWfName());
+			workFlowEntity = new WorkFlowEntity();
+			workFlowEntity.setCreatedDate(new Date());
+			workFlowEntity.setEntityCode(dto.getEntityCode());
+			workFlowEntity.setSourceData(dto.getSourceData());
+			workFlowEntity.setUniqueField(dto.getUniqueField());
+			workFlowEntity.setWfCode(dto.getWfId() + "_0");
+			workFlowEntity.setWfId(dto.getWfId());
+			workFlowEntity.setWfName(dto.getWfName());
 
-			workFlowRepository.save(flowEntity);
 		} else {
 			// update existing workflow entity
 
 			workFlowEntity.setSourceData(dto.getSourceData());
 			workFlowEntity.setModifiedDate(new Date());
 
-			workFlowRepository.save(workFlowEntity);
 		}
+		try {
+			workFlowRepository.save(workFlowEntity);
+			LOGGER.info("Execution Successful");
+		} catch (Exception e) {
+			String message = e.getMessage();
+			LOGGER.error("Execution error message:{}", message);
+		}
+	}
+
+	@Override
+	public void updateStatus(Map<String, String> wfStatusMap) {
+		String wfCode = wfStatusMap.get("wf_code");
+
+		try {
+			WorkFlowEntity entity = workFlowRepository.findByWfCode(wfCode);
+			String wfId = entity.getWfId();
+			workFlowRepository.updateByWfIdAndWfCodeSetStatusFlag(wfId, wfCode, "INACTIVE");
+
+			if (entity.getStatusFlag().equals("DRAFT") ) {
+				int highestVersion = workFlowRepository.findByWfIdMaxVersionGroupByWfId(wfId) + 1;
+
+				entity.setVersion(highestVersion);
+				entity.setWfCode(wfId + "_" + highestVersion);
+			}
+
+			entity.setStatusFlag(wfStatusMap.get("ststus_flag"));
+
+			workFlowRepository.save(entity);
+			LOGGER.info("Execution Successfull for wfCode:{}", wfCode);
+		} catch (Exception e) {
+			String message = e.getMessage();
+			LOGGER.error("execution error message:{}", message);
+		}
+
 	}
 
 }

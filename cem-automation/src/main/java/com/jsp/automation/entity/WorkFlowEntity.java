@@ -36,7 +36,7 @@ public class WorkFlowEntity {
 	private int version = 0;
 	
 	@Column(name = "status_flag")
-	private String ststusFlag = "DRAFT";
+	private String statusFlag = "DRAFT";
 	
 	@Column(name = "entity_code")
 	private String entityCode;
