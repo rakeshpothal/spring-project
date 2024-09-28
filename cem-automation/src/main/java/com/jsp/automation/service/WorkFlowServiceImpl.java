@@ -58,6 +58,14 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 		}
 	}
 
+	/**
+	 * It is used to update the status of workFlow Entity at a time only one antity.
+	 * State can be active all other entity except draft dhould be inactive when.
+	 * Draft will be active version will be update to highest version +1.
+	 * 
+	 * Receive argument {@link Map}<{@link String}>
+	 * 
+	 */
 	@Override
 	public void updateStatus(Map<String, String> wfStatusMap) {
 		String wfCode = wfStatusMap.get("wf_code");
@@ -65,9 +73,14 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 		try {
 			WorkFlowEntity entity = workFlowRepository.findByWfCode(wfCode);
 			String wfId = entity.getWfId();
+			
+			// upating status to inactive
 			workFlowRepository.updateByWfIdAndWfCodeSetStatusFlag(wfId, wfCode, "INACTIVE");
-
+			
+			// if status is draft then update version and wfCode
 			if (entity.getStatusFlag().equals("DRAFT")) {
+				
+				// get highest version and increment by 1
 				int highestVersion = workFlowRepository.findByWfIdMaxVersionGroupByWfId(wfId) + 1;
 
 				entity.setVersion(highestVersion);
