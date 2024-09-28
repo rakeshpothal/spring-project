@@ -67,7 +67,7 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 			String wfId = entity.getWfId();
 			workFlowRepository.updateByWfIdAndWfCodeSetStatusFlag(wfId, wfCode, "INACTIVE");
 
-			if (entity.getStatusFlag().equals("DRAFT") ) {
+			if (entity.getStatusFlag().equals("DRAFT")) {
 				int highestVersion = workFlowRepository.findByWfIdMaxVersionGroupByWfId(wfId) + 1;
 
 				entity.setVersion(highestVersion);
