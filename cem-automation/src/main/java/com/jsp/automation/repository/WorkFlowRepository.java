@@ -14,6 +14,7 @@ import com.jsp.automation.entity.WorkFlowEntity;
 /**
  * it is an interface which extends {@link JpaRepository} for database related
  * operations
+ * database operations for workflow entity
  */
 @Repository
 public interface WorkFlowRepository extends JpaRepository<WorkFlowEntity, BigInteger> {
@@ -31,4 +32,6 @@ public interface WorkFlowRepository extends JpaRepository<WorkFlowEntity, BigInt
 	
 	@Query(value = "select max(version) from WorkFlowEntity where wfId=:wfId group by wfId")
 	public int findByWfIdMaxVersionGroupByWfId(String wfId);
+	
+	
 }

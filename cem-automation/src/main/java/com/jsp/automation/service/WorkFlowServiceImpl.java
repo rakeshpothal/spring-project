@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.jsp.automation.controller.WorkFlowController;
 import com.jsp.automation.dto.WorkFlowDto;
 import com.jsp.automation.entity.WorkFlowEntity;
+import com.jsp.automation.repository.WorkFlowNodeRepository;
 import com.jsp.automation.repository.WorkFlowRepository;
 
 /**
@@ -21,12 +22,10 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WorkFlowController.class);
 	@Autowired
 	private WorkFlowRepository workFlowRepository;
+	
+	@Autowired
+	private WorkFlowNodeRepository workFlowNodeRepository;
 
-	/**
-	 * it is used to save the {@link WorkFlowEntity}
-	 * 
-	 * @param workFlowDto
-	 */
 	@Override
 	public void prepareAndUpdateWorkFlow(WorkFlowDto dto) {
 		WorkFlowEntity workFlowEntity = workFlowRepository.findByWfIdAndStatusFlag(dto.getWfId(), "DRAFT");
@@ -58,14 +57,6 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 		}
 	}
 
-	/**
-	 * It is used to update the status of workFlow Entity at a time only one antity.
-	 * State can be active all other entity except draft dhould be inactive when.
-	 * Draft will be active version will be update to highest version +1.
-	 * 
-	 * Receive argument {@link Map}<{@link String}>
-	 * 
-	 */
 	@Override
 	public void updateStatus(Map<String, String> wfStatusMap) {
 		String wfCode = wfStatusMap.get("wf_code");
@@ -73,13 +64,13 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 		try {
 			WorkFlowEntity entity = workFlowRepository.findByWfCode(wfCode);
 			String wfId = entity.getWfId();
-			
+
 			// upating status to inactive
 			workFlowRepository.updateByWfIdAndWfCodeSetStatusFlag(wfId, wfCode, "INACTIVE");
-			
+
 			// if status is draft then update version and wfCode
 			if (entity.getStatusFlag().equals("DRAFT")) {
-				
+
 				// get highest version and increment by 1
 				int highestVersion = workFlowRepository.findByWfIdMaxVersionGroupByWfId(wfId) + 1;
 
@@ -94,6 +85,17 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 		} catch (Exception e) {
 			String message = e.getMessage();
 			LOGGER.error("execution error message:{}", message);
+		}
+
+	}
+
+	@Override
+	public void findByWfCode(String wfCode) {
+		try {
+			workFlowNodeRepository.findByWfCode(wfCode);
+		} catch (Exception e) {
+			String message = e.getMessage();
+			LOGGER.error("transaction error message:{}", message);
 		}
 
 	}
