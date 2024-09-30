@@ -30,11 +30,6 @@ public class AutomationServiceImpl implements AutomationService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AutomationController.class);
 
-	/**
-	 * it is used to save {@link EntityModel} to database
-	 * 
-	 * @param entityDto
-	 */
 	@Override
 	public void saveEntityModel(EntityDto entityDto) {
 		EntityModel entity = new EntityModel();
@@ -56,11 +51,6 @@ public class AutomationServiceImpl implements AutomationService {
 		}
 	}
 
-	/**
-	 * it is used to get all entitymodel
-	 * 
-	 * @return {@link List}< {@link EntityDto}>
-	 */
 	@Override
 	public List<EntityDto> getEntityModel() {
 		try {
@@ -78,12 +68,6 @@ public class AutomationServiceImpl implements AutomationService {
 		return null;
 	}
 
-	/**
-	 * it is used to get entity by entityCode
-	 * 
-	 * @param {@link String} entityCode
-	 * @return {@link EntityDto} entityDto
-	 */
 	@Override
 	public EntityDto findByEntityCode(String entityCode) {
 		try {
