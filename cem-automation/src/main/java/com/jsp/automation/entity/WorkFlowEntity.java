@@ -2,6 +2,7 @@ package com.jsp.automation.entity;
 
 import java.math.BigInteger;
 import java.util.Date;
+import java.util.List;
 import java.util.jar.Attributes.Name;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -12,6 +13,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import lombok.Data;
 
 @Entity
@@ -52,5 +54,8 @@ public class WorkFlowEntity {
 	
 	@Column(name = "modified_date")
 	private Date modifiedDate;
+	
+	@Transient
+	List<NodeDetails> nodeDetails;
 
 }

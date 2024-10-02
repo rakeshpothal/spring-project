@@ -26,7 +26,7 @@ public class WorkFlowController {
 		/*
 		 * { "wf_id":"", "ststus_flag":"ACTIVATED", "wf_code":"work_flow_is_0" }
 		 */
-//		workFlowService.updateStatus(wfStatusMap);
-		workFlowService.findByWfCode(null);
+		workFlowService.updateStatus(wfStatusMap);
+//		workFlowService.findByWfCode(null);
 	}
 }

@@ -15,7 +15,7 @@ import lombok.Data;
 @Entity
 @Table(name = "cem_wf_node_info")
 @Data
-public class WorkFlowNodeEntity {
+public class NodeDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "alt_key", columnDefinition = "BIGINT")
@@ -27,8 +27,8 @@ public class WorkFlowNodeEntity {
 	@Column(name = "wf_code")
 	private String wfCode;
 
-	@Column(name = "incumming_node")
-	private String incummingNodes;
+	@Column(name = "incoming_node")
+	private String incomingNodes;
 
 	@Column(name = "outgoing_nodes")
 	private String outgoingNodes;
@@ -45,7 +45,6 @@ public class WorkFlowNodeEntity {
 	@Column(name = "modified_date")
 	private Date modifiedDate;
 
-	@Transient
-	private String nodeDetails;
+	
 
 }

@@ -8,10 +8,10 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.InputSource;
 
-import com.jsp.automation.dto.WorkFlowNodeDto;
+import com.jsp.automation.dto.NodeDetailsDto;
 
 public class XmlParser {
-	public static void saxParserData(String xmlData) {
+	public static List<NodeDetailsDto> saxParserData(String xmlData) {
 		try {
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser newSAXParser = factory.newSAXParser();
@@ -19,13 +19,16 @@ public class XmlParser {
 			InputSource inputSource = new InputSource(new StringReader(xmlData));
 			newSAXParser.parse(inputSource, xmlParseHandler);
 			
-			List<WorkFlowNodeDto> workFlowNodeDtos = xmlParseHandler.getWorkFlowNodeDtos();
-			for (WorkFlowNodeDto workFlowNodeDto : workFlowNodeDtos) {
-				System.out.println(workFlowNodeDto);
-			}
+			List<NodeDetailsDto> workFlowNodeDtos = xmlParseHandler.getWorkFlowNodeDtos();
+//			for (NodeDetailsDto workFlowNodeDto : workFlowNodeDtos) {
+//				System.out.println(workFlowNodeDto);
+//			}
+			return workFlowNodeDtos;
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return null;
 	}
+	
 }

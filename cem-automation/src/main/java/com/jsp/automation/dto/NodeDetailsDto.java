@@ -6,8 +6,9 @@ import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 @Data
-public class WorkFlowNodeDto {
+public class NodeDetailsDto {
 	private List<String> incomingNodes;
 	private List<String> outgoingNodes;
 	private Map<String, Object> nodeProperties;
+	private String nodeType;
 }

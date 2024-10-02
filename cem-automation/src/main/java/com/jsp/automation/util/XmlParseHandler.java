@@ -9,19 +9,20 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.jsp.automation.dto.WorkFlowNodeDto;
+import com.jsp.automation.dto.NodeDetailsDto;
 
 public class XmlParseHandler extends DefaultHandler {
-	private List<WorkFlowNodeDto> workFlowNodeDtos = new ArrayList<WorkFlowNodeDto>();
+	private List<NodeDetailsDto> workFlowNodeDtos = new ArrayList<NodeDetailsDto>();
 	private List<String> incomingNodes;
 	private List<String> outgoingNodes;
 	private Map<String, Object> nodeProperties;
+	private String nodeType;
 
 	private boolean isTaskOrEvent = false;
 	private boolean isIncoming = false;
 	private boolean isOutgoing = false;
 
-	public List<WorkFlowNodeDto> getWorkFlowNodeDtos() {
+	public List<NodeDetailsDto> getWorkFlowNodeDtos() {
 		return workFlowNodeDtos;
 	}
 
@@ -36,9 +37,11 @@ public class XmlParseHandler extends DefaultHandler {
 			nodeProperties = new HashMap<String, Object>();
 			incomingNodes = new ArrayList<String>();
 			outgoingNodes = new ArrayList<String>();
+
 			isTaskOrEvent = true;
 			nodeProperties.put("id", atts.getValue("id"));
 			nodeProperties.put("name", atts.getValue("name"));
+			nodeType = atts.getValue("name");
 			break;
 		case "bpmn:incoming":
 			isIncoming = true;
@@ -57,10 +60,11 @@ public class XmlParseHandler extends DefaultHandler {
 		case "bpmn:task":
 		case "bpmn:exclusiveGateway":
 			// Finalize the WorkFlowNodeDto and add to the list
-			WorkFlowNodeDto workFlowNodeDto = new WorkFlowNodeDto();
+			NodeDetailsDto workFlowNodeDto = new NodeDetailsDto();
 			workFlowNodeDto.setIncomingNodes(incomingNodes);
 			workFlowNodeDto.setOutgoingNodes(outgoingNodes);
 			workFlowNodeDto.setNodeProperties(nodeProperties);
+			workFlowNodeDto.setNodeType(nodeType);
 
 			workFlowNodeDtos.add(workFlowNodeDto);
 
@@ -68,6 +72,7 @@ public class XmlParseHandler extends DefaultHandler {
 			incomingNodes = null;
 			outgoingNodes = null;
 			nodeProperties = null;
+			nodeType = null;
 			break;
 		}
 	}

@@ -1,7 +1,9 @@
 package com.jsp.automation.service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,10 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jsp.automation.controller.WorkFlowController;
+import com.jsp.automation.dto.NodeDetailsDto;
 import com.jsp.automation.dto.WorkFlowDto;
+import com.jsp.automation.entity.NodeDetails;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.repository.WorkFlowNodeRepository;
 import com.jsp.automation.repository.WorkFlowRepository;
+import com.jsp.automation.util.ConvertMapToString;
+import com.jsp.automation.util.Converter;
 import com.jsp.automation.util.XmlParser;
 
 /**
@@ -23,9 +29,15 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WorkFlowController.class);
 	@Autowired
 	private WorkFlowRepository workFlowRepository;
-	
+
 	@Autowired
 	private WorkFlowNodeRepository workFlowNodeRepository;
+
+	@Autowired
+	private Converter converter;
+	
+	@Autowired
+	private ConvertMapToString convertMapToString;
 
 	@Override
 	public void prepareAndUpdateWorkFlow(WorkFlowDto dto) {
@@ -83,6 +95,10 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 
 			workFlowRepository.save(entity);
 			LOGGER.info("Execution Successfull for wfCode:{}", wfCode);
+
+			// create and save node details
+			saveNodeDetails(entity.getSourceData(), entity.getWfCode(), entity.getVersion());
+
 		} catch (Exception e) {
 			String message = e.getMessage();
 			LOGGER.error("execution error message:{}", message);
@@ -93,17 +109,34 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 	@Override
 	public void findByWfCode(String wfCode) {
 		try {
-//			workFlowNodeRepository.findByWfCode(wfCode);
-			WorkFlowEntity byWfCode = workFlowRepository.findByWfCode("test1_0");
-			String sourceData = byWfCode.getSourceData();
-			
-			XmlParser.saxParserData(sourceData);
-			
+			workFlowNodeRepository.findByWfCode(wfCode);
+//			WorkFlowEntity byWfCode = workFlowRepository.findByWfCode("test1_0");
+//			String sourceData = byWfCode.getSourceData();
+//
+//			XmlParser.saxParserData(sourceData);
+
 		} catch (Exception e) {
 			String message = e.getMessage();
 			LOGGER.error("transaction error message:{}", message);
 		}
 
+	}
+
+	private void saveNodeDetails(String sourceData, String wfCode, int version) {
+		List<NodeDetailsDto> nodeDetailsList = XmlParser.saxParserData(sourceData);
+		List<NodeDetails> nodeDetailsEntity = nodeDetailsList.stream().map(nodeDetails -> {
+			NodeDetails details = new NodeDetails();
+			details.setCreatedDate(new Date());
+			details.setIncomingNodes(converter.convertToDatabaseColumn(nodeDetails.getIncomingNodes()));
+			details.setNodeId(nodeDetails.getNodeType() + "_" + version);
+			details.setNodeType(nodeDetails.getNodeType());
+			details.setOutgoingNodes(converter.convertToDatabaseColumn(nodeDetails.getOutgoingNodes()));
+			details.setWfCode(wfCode);
+			details.setNodeProperties(convertMapToString.convertToDatabaseColumn(nodeDetails.getNodeProperties()));
+			return details;
+		}).collect(Collectors.toList());
+		
+		workFlowNodeRepository.saveAll(nodeDetailsEntity);
 	}
 
 }
