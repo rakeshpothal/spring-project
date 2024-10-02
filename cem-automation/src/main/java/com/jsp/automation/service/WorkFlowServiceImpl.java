@@ -13,6 +13,7 @@ import com.jsp.automation.dto.WorkFlowDto;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.repository.WorkFlowNodeRepository;
 import com.jsp.automation.repository.WorkFlowRepository;
+import com.jsp.automation.util.XmlParser;
 
 /**
  * it is an implimention class for {@link WorkFlowService}
@@ -92,7 +93,12 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 	@Override
 	public void findByWfCode(String wfCode) {
 		try {
-			workFlowNodeRepository.findByWfCode(wfCode);
+//			workFlowNodeRepository.findByWfCode(wfCode);
+			WorkFlowEntity byWfCode = workFlowRepository.findByWfCode("test1_0");
+			String sourceData = byWfCode.getSourceData();
+			
+			XmlParser.saxParserData(sourceData);
+			
 		} catch (Exception e) {
 			String message = e.getMessage();
 			LOGGER.error("transaction error message:{}", message);
