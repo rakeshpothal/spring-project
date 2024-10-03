@@ -5,6 +5,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import jakarta.persistence.AttributeConverter;
 
 /**
@@ -17,11 +21,16 @@ import jakarta.persistence.AttributeConverter;
  */
 @Component
 public class Converter implements AttributeConverter<List<String>, String> {
-
+	private final ObjectMapper objectMapper = new ObjectMapper();
 	@Override
 	public String convertToDatabaseColumn(List<String> attribute) {
 		if (attribute != null) {
-			return String.join(",", attribute);
+//			return String.join(",", attribute);
+			try {
+				return objectMapper.writeValueAsString(attribute);
+			} catch (JsonProcessingException e) {
+				throw new IllegalArgumentException("Error in converting list of String to string");
+			}
 		}
 		return null;
 	}
@@ -29,7 +38,13 @@ public class Converter implements AttributeConverter<List<String>, String> {
 	@Override
 	public List<String> convertToEntityAttribute(String dbData) {
 		if (dbData != null) {
-			return Arrays.asList(dbData.split(","));
+//			return Arrays.asList(dbData.split(","));
+			try {
+				return objectMapper.readValue(dbData, new TypeReference<List<String>>() {
+				});
+			} catch (JsonProcessingException e) {
+				throw new IllegalArgumentException("error converting string to list if String");
+			}
 		}
 		return null;
 	}

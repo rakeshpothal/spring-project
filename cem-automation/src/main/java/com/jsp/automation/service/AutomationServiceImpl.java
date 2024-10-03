@@ -13,6 +13,7 @@ import com.jsp.automation.controller.AutomationController;
 import com.jsp.automation.dto.EntityDto;
 import com.jsp.automation.entity.EntityModel;
 import com.jsp.automation.repository.EntityRepository;
+import com.jsp.automation.util.ConvertListOfMapToString;
 import com.jsp.automation.util.Converter;
 
 /**
@@ -27,6 +28,9 @@ public class AutomationServiceImpl implements AutomationService {
 
 	@Autowired
 	private Converter converter;
+	
+	@Autowired
+	private ConvertListOfMapToString convertListOfMapToString;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AutomationController.class);
 
@@ -40,6 +44,7 @@ public class AutomationServiceImpl implements AutomationService {
 		entity.setRemarks(entityDto.getRemarks());
 		entity.setTemplateFields(converter.convertToDatabaseColumn(entityDto.getTemplateFields()));
 		entity.setUniqueFields(converter.convertToDatabaseColumn(entityDto.getUniqueFields()));
+		entity.setStatusFieldValues(convertListOfMapToString.convertToDatabaseColumn(entityDto.getStatusFieldValues()));
 
 		try {
 			entityRepository.save(entity);
@@ -98,6 +103,7 @@ public class AutomationServiceImpl implements AutomationService {
 		entityDto.setRemarks(entity.getRemarks());
 		entityDto.setTemplateFields(converter.convertToEntityAttribute(entity.getTemplateFields()));
 		entityDto.setUniqueFields(converter.convertToEntityAttribute(entity.getUniqueFields()));
+		entityDto.setStatusFieldValues(convertListOfMapToString.convertToEntityAttribute(entity.getStatusFieldValues()));
 		return entityDto;
 	}
 

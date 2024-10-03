@@ -24,7 +24,7 @@ public class WorkFlowController {
 	@PostMapping(value = MappingConstantForWorkFlow.UPDATE_WORKFLOW)
 	public void updateStatus(@RequestBody Map<String, String> wfStatusMap) {
 		/*
-		 * { "wf_id":"", "ststus_flag":"ACTIVATED", "wf_code":"work_flow_is_0" }
+		 * { "wf_id":"", "ststus_flag":"ACTIVE", "wf_code":"work_flow_is_0" }
 		 */
 		workFlowService.updateStatus(wfStatusMap);
 //		workFlowService.findByWfCode(null);

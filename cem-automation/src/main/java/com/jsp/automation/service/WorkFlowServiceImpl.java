@@ -1,14 +1,19 @@
 package com.jsp.automation.service;
 
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.xml.sax.SAXException;
 
 import com.jsp.automation.controller.WorkFlowController;
 import com.jsp.automation.dto.NodeDetailsDto;
@@ -35,7 +40,7 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 
 	@Autowired
 	private Converter converter;
-	
+
 	@Autowired
 	private ConvertMapToString convertMapToString;
 
@@ -89,15 +94,17 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 
 				entity.setVersion(highestVersion);
 				entity.setWfCode(wfId + "_" + highestVersion);
+
+				// create and save node details
+				saveNodeDetails(entity.getSourceData(), entity.getWfCode(), entity.getVersion());
 			}
 
 			entity.setStatusFlag(wfStatusMap.get("ststus_flag"));
 
+			// update workflow entity to active after update the entity
 			workFlowRepository.save(entity);
-			LOGGER.info("Execution Successfull for wfCode:{}", wfCode);
 
-			// create and save node details
-			saveNodeDetails(entity.getSourceData(), entity.getWfCode(), entity.getVersion());
+			LOGGER.info("Execution Successfull for wfCode:{}", wfCode);
 
 		} catch (Exception e) {
 			String message = e.getMessage();
@@ -122,10 +129,26 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 
 	}
 
-	private void saveNodeDetails(String sourceData, String wfCode, int version) {
+	/**
+	 * it is used to convert object from xml with sax parser it will create node
+	 * details and save data to database
+	 * 
+	 * @param sourceData
+	 * @param wfCode
+	 * @param version
+	 * @throws ParserConfigurationException
+	 * @throws IOException
+	 * @throws SAXException
+	 * 
+	 * 
+	 */
+	private void saveNodeDetails(String sourceData, String wfCode, int version)
+			throws SAXException, IOException, ParserConfigurationException {
 		List<NodeDetailsDto> nodeDetailsList = XmlParser.saxParserData(sourceData);
+
 		List<NodeDetails> nodeDetailsEntity = nodeDetailsList.stream().map(nodeDetails -> {
 			NodeDetails details = new NodeDetails();
+
 			details.setCreatedDate(new Date());
 			details.setIncomingNodes(converter.convertToDatabaseColumn(nodeDetails.getIncomingNodes()));
 			details.setNodeId(nodeDetails.getNodeType() + "_" + version);
@@ -133,9 +156,10 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 			details.setOutgoingNodes(converter.convertToDatabaseColumn(nodeDetails.getOutgoingNodes()));
 			details.setWfCode(wfCode);
 			details.setNodeProperties(convertMapToString.convertToDatabaseColumn(nodeDetails.getNodeProperties()));
+
 			return details;
 		}).collect(Collectors.toList());
-		
+
 		workFlowNodeRepository.saveAll(nodeDetailsEntity);
 	}
 
