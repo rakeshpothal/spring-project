@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -90,6 +91,11 @@ public class DbConfig {
 //		properties.setProperty("hibernate.show_sql", "true");
 //		properties.setProperty("hibernate.hbm2ddl.auto", "update");
 		return properties;
+	}
+	
+	@Bean
+	public JdbcTemplate getJdbcTemplate(HikariDataSource dataSource) {
+		return new JdbcTemplate(dataSource);
 	}
 
 }
