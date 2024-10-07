@@ -1,6 +1,5 @@
 package com.jsp.automation.util;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Component;

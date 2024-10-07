@@ -34,11 +34,12 @@ public class XmlParseHandler extends DefaultHandler {
 		case "bpmn:endEvent":
 		case "bpmn:task":
 		case "bpmn:exclusiveGateway":
+			isTaskOrEvent = true;
 			nodeProperties = new HashMap<String, Object>();
 			incomingNodes = new ArrayList<String>();
 			outgoingNodes = new ArrayList<String>();
 
-			isTaskOrEvent = true;
+			
 			nodeProperties.put("id", atts.getValue("id"));
 			nodeProperties.put("name", atts.getValue("name"));
 			nodeType = atts.getValue("name");

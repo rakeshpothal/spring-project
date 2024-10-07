@@ -1,4 +1,4 @@
-package com.jsp.automation.service;
+package com.jsp.automation.service.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -13,6 +13,7 @@ import com.jsp.automation.controller.AutomationController;
 import com.jsp.automation.dto.EntityDto;
 import com.jsp.automation.entity.EntityModel;
 import com.jsp.automation.repository.EntityRepository;
+import com.jsp.automation.service.AutomationService;
 import com.jsp.automation.util.ConvertListOfMapToString;
 import com.jsp.automation.util.Converter;
 

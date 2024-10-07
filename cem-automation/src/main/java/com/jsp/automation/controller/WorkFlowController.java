@@ -3,6 +3,8 @@ package com.jsp.automation.controller;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jsp.automation.constant.MappingConstantForWorkFlow;
 import com.jsp.automation.dto.WorkFlowDto;
 import com.jsp.automation.service.WorkFlowService;
+import com.jsp.automation.service.impl.WorkFlowServiceImpl;
+
+import jakarta.websocket.server.PathParam;
 
 @RestController
 public class WorkFlowController {
@@ -28,5 +33,15 @@ public class WorkFlowController {
 		 */
 		workFlowService.updateStatus(wfStatusMap);
 //		workFlowService.findByWfCode(null);
+	}
+	
+	@GetMapping(value = "/test")
+	public void transactionContext() {
+		new WorkFlowServiceImpl().workflowTransactionContext();
+	}
+	
+	@GetMapping(value = "/getnode/{wfCode}")
+	public void getNodeConfig(@PathVariable("wfCode") String wfCode) {
+		workFlowService.findByWfCode(wfCode);
 	}
 }

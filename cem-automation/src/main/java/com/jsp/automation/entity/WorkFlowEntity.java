@@ -56,6 +56,6 @@ public class WorkFlowEntity {
 	private Date modifiedDate;
 	
 	@Transient
-	List<NodeDetails> nodeDetails;
+	List<NodeDetailsModel> nodeDetails;
 
 }

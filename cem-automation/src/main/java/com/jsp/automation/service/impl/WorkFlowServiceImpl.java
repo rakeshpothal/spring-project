@@ -1,7 +1,6 @@
-package com.jsp.automation.service;
+package com.jsp.automation.service.impl;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +15,18 @@ import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
 
 import com.jsp.automation.controller.WorkFlowController;
+import com.jsp.automation.dto.NodeConfig;
 import com.jsp.automation.dto.NodeDetailsDto;
 import com.jsp.automation.dto.WorkFlowDto;
-import com.jsp.automation.entity.NodeDetails;
+import com.jsp.automation.dto.WorkflowTransactionContext;
+import com.jsp.automation.entity.NodeDetailsModel;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.repository.WorkFlowNodeRepository;
 import com.jsp.automation.repository.WorkFlowRepository;
+import com.jsp.automation.service.WorkFlowService;
 import com.jsp.automation.util.ConvertMapToString;
 import com.jsp.automation.util.Converter;
+import com.jsp.automation.util.NodeConfigBuilder;
 import com.jsp.automation.util.XmlParser;
 
 /**
@@ -43,6 +46,17 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 
 	@Autowired
 	private ConvertMapToString convertMapToString;
+
+	@Autowired
+	private NodeConfigBuilder nodeConfigBuilder;
+
+	public void workflowTransactionContext() {
+		WorkflowTransactionContext transactionContext = new WorkflowTransactionContext();
+		WorkflowTransactionContext clone = transactionContext.clone();
+		System.out.println(transactionContext);
+		System.out.println("----------------");
+		System.out.println(clone);
+	}
 
 	@Override
 	public void prepareAndUpdateWorkFlow(WorkFlowDto dto) {
@@ -116,15 +130,29 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 	@Override
 	public void findByWfCode(String wfCode) {
 		try {
-			workFlowNodeRepository.findByWfCode(wfCode);
-//			WorkFlowEntity byWfCode = workFlowRepository.findByWfCode("test1_0");
-//			String sourceData = byWfCode.getSourceData();
-//
-//			XmlParser.saxParserData(sourceData);
+			List<NodeDetailsModel> nodeDetailsModelList = workFlowNodeRepository.findByWfCode(wfCode);
+			getStartNodeConifg(nodeDetailsModelList);
 
 		} catch (Exception e) {
 			String message = e.getMessage();
 			LOGGER.error("transaction error message:{}", message);
+		}
+
+	}
+
+	private void getStartNodeConifg(List<NodeDetailsModel> nodeDetailsModels) {
+		List<NodeConfig> nodeConfig = nodeConfigBuilder.getNodeConfig(nodeDetailsModels);
+
+		List<NodeConfig> startNodeConigs = nodeConfig.stream()
+				.filter(nodeConfigData -> nodeConfigData.getNodeType().toLowerCase().equals("start"))
+				.collect(Collectors.toList());
+
+		for (NodeConfig nodeConfig2 : nodeConfig) {
+			System.out.println(nodeConfig2);
+		}
+		System.out.println("---------------");
+		for (NodeConfig nodeConfig2 : startNodeConigs) {
+			System.out.println(nodeConfig2);
 		}
 
 	}
@@ -146,8 +174,8 @@ public class WorkFlowServiceImpl implements WorkFlowService {
 			throws SAXException, IOException, ParserConfigurationException {
 		List<NodeDetailsDto> nodeDetailsList = XmlParser.saxParserData(sourceData);
 
-		List<NodeDetails> nodeDetailsEntity = nodeDetailsList.stream().map(nodeDetails -> {
-			NodeDetails details = new NodeDetails();
+		List<NodeDetailsModel> nodeDetailsEntity = nodeDetailsList.stream().map(nodeDetails -> {
+			NodeDetailsModel details = new NodeDetailsModel();
 
 			details.setCreatedDate(new Date());
 			details.setIncomingNodes(converter.convertToDatabaseColumn(nodeDetails.getIncomingNodes()));

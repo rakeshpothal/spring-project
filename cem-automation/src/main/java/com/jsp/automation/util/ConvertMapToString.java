@@ -39,5 +39,17 @@ public class ConvertMapToString implements AttributeConverter<Map<String, Object
 			throw new IllegalArgumentException("error converting string to list of map");
 		}
 	}
+	
+	public Map<String, String> convertStringToMap(String dbData) {
+		if (dbData == null || dbData.isEmpty()) {
+			return null;
+		}
+		try {
+			return objectMapper.readValue(dbData, new TypeReference<Map<String, String>>() {
+			});
+		} catch (Exception e) {
+			throw new IllegalArgumentException("error converting string to list of map");
+		}
+	}
 
 }

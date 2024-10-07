@@ -15,7 +15,7 @@ import lombok.Data;
 @Entity
 @Table(name = "cem_wf_node_info")
 @Data
-public class NodeDetails {
+public class NodeDetailsModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "alt_key", columnDefinition = "BIGINT")
