@@ -17,12 +17,6 @@ public class NodeConfig {
 	boolean isStartnode;
 	boolean isEndNode;
 
-	@Override
-	public String toString() {
-		return "NodeConfig [nodeProperties=" + nodeProperties + ", nodeId=" + nodeId + ", nodeType=" + nodeType
-				+ ", incomingNode=" + incomingNode + ", outgoingNode=" + outgoingNode + ", associatedBoundaryNode="
-				+ associatedBoundaryNode + ", sourceNodeConfig=" + sourceNodeConfig + ", isStartnode=" + isStartnode
-				+ ", isEndNode=" + isEndNode + "]";
-	}
+	
 
 }

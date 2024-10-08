@@ -4,8 +4,12 @@ import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 import java.util.jar.Attributes.Name;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Value;
+
+import com.jsp.automation.dto.NodeConfig;
+import com.jsp.automation.util.NodeConfigBuilder;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -57,5 +61,15 @@ public class WorkFlowEntity {
 	
 	@Transient
 	List<NodeDetailsModel> nodeDetails;
+	
+	public List<NodeConfig> getStartNodeConfig() {
+		List<NodeDetailsModel> nodeConfig = nodeDetails.stream().filter(each->each.getNodeType().toLowerCase().equals("start")).collect(Collectors.toList());
+		return new NodeConfigBuilder().getNodeConfig(nodeConfig);
+	}
+	
+	public List<NodeConfig> getAllNodeConfig() {
+		List<NodeConfig> nodeConfig = new NodeConfigBuilder().getNodeConfig(nodeDetails);
+		return nodeConfig;
+	}
 
 }

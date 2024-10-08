@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.jsp.automation.entity.EntityModel;
+import com.jsp.automation.entity.NodeDetailsModel;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.entity.WorkFlowTransactionModel;
 
@@ -19,7 +20,7 @@ public class WorkflowTransactionContext implements Cloneable {
 	String remarks;
 	BigInteger workflowTransactionAltKey;
 	WorkFlowTransactionModel workFlowTransactionModel;
-	NodeDetailsDto nextNodeConfig;
+	NodeDetailsModel nextNodeConfig;
 	NodeExecutionContext currentNodeExecutionContext;
 	Map<String, NodeExecutionContext> currentNodeExucutionContextMap = new ConcurrentHashMap<String, NodeExecutionContext>();
 
@@ -54,14 +55,24 @@ public class WorkflowTransactionContext implements Cloneable {
 
 	}
 
-	@Override
-	public String toString() {
-		return "WorkflowTransactionContext [workFlowEntity=" + workFlowEntity + ", entityModel=" + entityModel
-				+ ", executionStrat=" + executionStart + ", executionEnd=" + executionEnd + ", executionStatus="
-				+ executionStatus + ", remarks=" + remarks + ", workflowTransactionAltKey=" + workflowTransactionAltKey
-				+ ", workFlowTransactionModel=" + workFlowTransactionModel + ", nextNodeConfig=" + nextNodeConfig
-				+ ", currentNodeExecutionContext=" + currentNodeExecutionContext + ", currentNodeExucutionContextMap="
-				+ currentNodeExucutionContextMap + "]";
+	public WorkFlowEntity getWorkFlowEntity() {
+		return workFlowEntity;
 	}
 
+	public void setWorkFlowEntity(WorkFlowEntity workFlowEntity) {
+		this.workFlowEntity = workFlowEntity;
+	}
+
+	public WorkFlowTransactionModel getWorkFlowTransactionModel() {
+		return workFlowTransactionModel;
+	}
+
+	public EntityModel getEntityModel() {
+		return entityModel;
+	}
+
+	public void setEntityModel(EntityModel entityModel) {
+		this.entityModel = entityModel;
+	}
+	
 }

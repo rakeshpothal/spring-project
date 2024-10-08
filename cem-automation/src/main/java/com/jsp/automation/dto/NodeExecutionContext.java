@@ -9,27 +9,21 @@ import com.jsp.automation.entity.NodeDetailsModel;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.entity.WorkFlowTransactionModel;
 
+import lombok.Data;
 
+@Data
 public class NodeExecutionContext {
 	Date executionStart;
 	Date executionEnd;
-	String executionStatus;//inprogress initially
+	String executionStatus;// inprogress initially
 	String nodeId;
-	NodeDetailsModel prevExecutedNodeConfig; //for start its null
-	NodeDetailsModel currentNodeConfig;
-	List<NodeDetailsDto> nextExecutionNodeConfig;
+	NodeConfig prevExecutedNodeConfig; // for start its null
+	NodeConfig currentNodeConfig;
+	List<NodeConfig> nextExecutionNodeConfig;
 	WorkFlowEntity workFlowEntity;
 	WorkFlowTransactionModel workFlowTransactionModel;
 
 	Map<String, Object> transactionDataMap;
 	EntityModel entityModel;
-
-	public String getNodeId() {
-		return nodeId;
-	}
-
-	public void setNodeId(String nodeId) {
-		this.nodeId = nodeId;
-	}
 
 }
