@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jsp.automation.constant.MappingConstantForEntityModel;
 import com.jsp.automation.dto.EntityDto;
+import com.jsp.automation.queue.service.ListenerService;
+import com.jsp.automation.queue.service.TriggerService;
 import com.jsp.automation.service.AutomationService;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -18,6 +23,12 @@ public class AutomationController {
 
 	@Autowired
 	AutomationService automationService;
+	
+	@Autowired
+	TriggerService triggerService;
+	
+	@Autowired
+	ListenerService listenerService;
 
 	@PostMapping(value = MappingConstantForEntityModel.SAVE_ENTITY_MODEL)
 	public void saveEntityModel(@RequestBody EntityDto entityDto) {
@@ -34,5 +45,15 @@ public class AutomationController {
 	public EntityDto getEntityByentityCode(String entityCode) {
 		return automationService.findByEntityCode(entityCode);
 	}
+	
+	@GetMapping(value = "/check")
+	public void getMethodName() {
+		triggerService.sendMessageInrabbitMq();
+	}
+//	@GetMapping(value = "/message")
+//	public void getMethodmessage() {
+//		listenerService.listenerEventMessage(null);
+//	}
+	
 
 }

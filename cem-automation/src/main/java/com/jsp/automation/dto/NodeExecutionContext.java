@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.jsp.automation.entity.EntityModel;
-import com.jsp.automation.entity.NodeDetailsModel;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.entity.WorkFlowTransactionModel;
 
@@ -22,8 +21,9 @@ public class NodeExecutionContext {
 	List<NodeConfig> nextExecutionNodeConfig;
 	WorkFlowEntity workFlowEntity;
 	WorkFlowTransactionModel workFlowTransactionModel;
-
+	NodeExecutionResult nodeExecutionResult;
 	Map<String, Object> transactionDataMap;
 	EntityModel entityModel;
+	
 
 }

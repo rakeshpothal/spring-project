@@ -3,10 +3,10 @@ package com.jsp.automation.entity;
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
-import java.util.jar.Attributes.Name;
+
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Value;
+
 
 import com.jsp.automation.dto.NodeConfig;
 import com.jsp.automation.util.NodeConfigBuilder;

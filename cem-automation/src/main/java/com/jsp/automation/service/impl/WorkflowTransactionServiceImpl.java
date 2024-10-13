@@ -4,13 +4,14 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jsp.automation.dto.NodeConfig;
 import com.jsp.automation.dto.NodeExecutionContext;
 import com.jsp.automation.dto.WorkflowTransactionContext;
 import com.jsp.automation.service.DataManagerService;
 import com.jsp.automation.service.WorkflowTransactionService;
-
+@Service
 public class WorkflowTransactionServiceImpl implements WorkflowTransactionService {
 	@Autowired
 	private DataManagerService dataManagerService;
@@ -39,8 +40,9 @@ public class WorkflowTransactionServiceImpl implements WorkflowTransactionServic
 		nodeExecutionContext.setWorkFlowEntity(context.getWorkFlowEntity());
 		nodeExecutionContext.setWorkFlowTransactionModel(context.getWorkFlowTransactionModel());
 		nodeExecutionContext.setEntityModel(context.getEntityModel());
-		dataManagerService.getSingleTransactionData(context.getEntityModel().getEntityCode(),
-				context.getEntityModel().getUniqueFields(), context.getEntityModel().getStatusFieldValues(), nodeId);
+		nodeExecutionContext.setTransactionDataMap(dataManagerService.getSingleTransactionData(
+				context.getEntityModel().getEntityName(), context.getEntityModel().getUniqueFields(),
+				context.getEntityModel().getStatusFieldValues(), nodeId));
 
 		return nodeExecutionContext;
 	}

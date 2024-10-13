@@ -2,8 +2,8 @@ package com.jsp.automation.entity;
 
 import java.math.BigInteger;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
+
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

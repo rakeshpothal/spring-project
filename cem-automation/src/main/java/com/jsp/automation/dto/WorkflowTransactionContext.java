@@ -74,5 +74,62 @@ public class WorkflowTransactionContext implements Cloneable {
 	public void setEntityModel(EntityModel entityModel) {
 		this.entityModel = entityModel;
 	}
+
+	public String getExecutionStatus() {
+		return executionStatus;
+	}
+
+	public void setExecutionStatus(String executionStatus) {
+		this.executionStatus = executionStatus;
+	}
+
+	public String getRemarks() {
+		return remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
+
+	public Date getExecutionStart() {
+		return executionStart;
+	}
+
+	public void setExecutionStart(Date executionStart) {
+		this.executionStart = executionStart;
+	}
+
+	public Date getExecutionEnd() {
+		return executionEnd;
+	}
+
+	public void setExecutionEnd(Date executionEnd) {
+		this.executionEnd = executionEnd;
+	}
+
+	public NodeDetailsModel getNextNodeConfig() {
+		return nextNodeConfig;
+	}
+
+	public void setNextNodeConfig(NodeDetailsModel nextNodeConfig) {
+		this.nextNodeConfig = nextNodeConfig;
+	}
+
+	public Map<String, NodeExecutionContext> getCurrentNodeExucutionContextMap() {
+		return currentNodeExucutionContextMap;
+	}
+
+	public void setCurrentNodeExucutionContextMap(Map<String, NodeExecutionContext> currentNodeExucutionContextMap) {
+		this.currentNodeExucutionContextMap = currentNodeExucutionContextMap;
+	}
+
+	public BigInteger getWorkflowTransactionAltKey() {
+		return workflowTransactionAltKey;
+	}
+
+	public NodeExecutionContext getCurrentNodeExecutionContext() {
+		return currentNodeExecutionContext;
+	}
+	
 	
 }

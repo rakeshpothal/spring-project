@@ -5,10 +5,10 @@ import java.math.BigInteger;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.jsp.automation.entity.WorkFlowTransactionModel;
+import com.jsp.automation.entity.WorkflowTransactionLogModel;
 
 
 @Repository
-public interface WorkFlowTransactionRepository extends JpaRepository<WorkFlowTransactionModel, BigInteger> {
+public interface WorkflowTransactionLogModelRepository extends JpaRepository<WorkflowTransactionLogModel, BigInteger> {
 
 }
