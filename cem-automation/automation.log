@@ -5480,3 +5480,213 @@ Caused by: org.springframework.messaging.converter.MessageConversionException: C
 2024-10-14T00:49:25.937+05:30  INFO 11564 --- [cem-automation] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-10-14T00:49:25.937+05:30  INFO 11564 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-10-14T00:49:25.938+05:30  INFO 11564 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-14T00:52:18.225+05:30  INFO 11564 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-14T00:52:18.232+05:30  INFO 11564 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-14T00:52:18.379+05:30  INFO 11564 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-14T00:52:18.387+05:30  INFO 11564 --- [cem-automation] [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:52:18.388+05:30  INFO 11564 --- [cem-automation] [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-10-14T00:52:18.390+05:30  INFO 11564 --- [cem-automation] [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-10-14T00:52:18.458+05:30  INFO 11564 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 11564 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-14T00:52:18.458+05:30 DEBUG 11564 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-14T00:52:18.458+05:30  INFO 11564 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:52:18.597+05:30  INFO 11564 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:52:18.607+05:30  INFO 11564 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 5 JPA repository interfaces.
+2024-10-14T00:52:18.671+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-14T00:52:18.671+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T00:52:18.671+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T00:52:18.682+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-14T00:52:18.682+05:30  INFO 11564 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 223 ms
+2024-10-14T00:52:18.723+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:52:18.725+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:52:18.735+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:52:18.736+05:30  INFO 11564 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-10-14T00:52:18.752+05:30  INFO 11564 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12c56c39
+2024-10-14T00:52:18.752+05:30  INFO 11564 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-10-14T00:52:18.793+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:52:18.793+05:30  INFO 11564 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:52:19.188+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T00:52:19.191+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-14T00:52:19.213+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-14T00:52:19.214+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-14T00:52:19.222+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#4d5aec4d:0/SimpleConnection@19057468 [delegate=amqp://guest@127.0.0.1:5672/, localPort=60634]
+2024-10-14T00:52:19.223+05:30  INFO 11564 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-14T00:52:19.231+05:30  INFO 11564 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 0.785 seconds (process running for 360.769)
+2024-10-14T00:52:19.232+05:30  INFO 11564 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-14T00:52:28.310+05:30  INFO 11564 --- [cem-automation] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-14T00:52:28.310+05:30  INFO 11564 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-14T00:52:28.311+05:30  INFO 11564 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-14T00:52:34.185+05:30  INFO 11564 --- [cem-automation] [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-10-14T00:52:34.187+05:30  INFO 11564 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-14T00:52:34.352+05:30  INFO 11564 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-14T00:52:34.364+05:30  INFO 11564 --- [cem-automation] [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:52:34.365+05:30  INFO 11564 --- [cem-automation] [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-10-14T00:52:34.368+05:30  INFO 11564 --- [cem-automation] [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-10-14T00:52:44.488+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 23440 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-14T00:52:44.489+05:30 DEBUG 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-14T00:52:44.490+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:52:44.523+05:30  INFO 23440 --- [cem-automation] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-14T00:52:44.523+05:30  INFO 23440 --- [cem-automation] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-14T00:52:45.165+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:52:45.214+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2024-10-14T00:52:45.675+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-14T00:52:45.686+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T00:52:45.687+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T00:52:45.723+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-14T00:52:45.723+05:30  INFO 23440 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1200 ms
+2024-10-14T00:52:45.880+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:52:45.912+05:30  INFO 23440 --- [cem-automation] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-14T00:52:45.933+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:52:46.150+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:52:46.166+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-14T00:52:46.383+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2364237f
+2024-10-14T00:52:46.384+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-14T00:52:46.962+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:52:46.964+05:30  INFO 23440 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:52:47.264+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-14T00:52:48.191+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T00:52:48.198+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-14T00:52:48.285+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-14T00:52:48.287+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-14T00:52:48.332+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#4d4e7a94:0/SimpleConnection@1ece48ca [delegate=amqp://guest@127.0.0.1:5672/, localPort=60673]
+2024-10-14T00:52:48.337+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-14T00:52:48.373+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 4.101 seconds (process running for 4.574)
+2024-10-14T00:52:48.584+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-14T00:52:48.584+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-14T00:52:48.585+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-14T00:52:53.032+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 124 ms
+2024-10-14T00:53:25.753+05:30  INFO 23440 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-14T00:53:25.770+05:30  INFO 23440 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-14T00:53:25.887+05:30  INFO 23440 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-14T00:53:25.899+05:30  INFO 23440 --- [cem-automation] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:53:25.899+05:30  INFO 23440 --- [cem-automation] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-14T00:53:25.904+05:30  INFO 23440 --- [cem-automation] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-14T00:53:25.962+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 23440 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-14T00:53:25.962+05:30 DEBUG 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-14T00:53:25.962+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:53:26.125+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:53:26.138+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 5 JPA repository interfaces.
+2024-10-14T00:53:26.223+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-14T00:53:26.224+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T00:53:26.224+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T00:53:26.236+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-14T00:53:26.237+05:30  INFO 23440 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2024-10-14T00:53:26.282+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:53:26.283+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:53:26.300+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:53:26.300+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-14T00:53:26.310+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71b85a4e
+2024-10-14T00:53:26.310+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-14T00:53:26.373+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:53:26.374+05:30  INFO 23440 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:53:26.769+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T00:53:26.771+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-14T00:53:26.794+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-14T00:53:26.799+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 0.851 seconds (process running for 42.999)
+2024-10-14T00:53:26.800+05:30  INFO 23440 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-14T00:53:32.475+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-14T00:53:32.475+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-14T00:53:32.477+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-14T00:53:32.478+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-14T00:53:32.484+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#63d9c973:0/SimpleConnection@ccf8604 [delegate=amqp://guest@127.0.0.1:5672/, localPort=60707]
+2024-10-14T00:53:32.485+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-14T00:53:47.279+05:30  INFO 23440 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-14T00:53:47.295+05:30  INFO 23440 --- [cem-automation] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:53:47.296+05:30  INFO 23440 --- [cem-automation] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-14T00:53:47.300+05:30  INFO 23440 --- [cem-automation] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-14T00:53:47.357+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 23440 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-14T00:53:47.358+05:30 DEBUG 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-14T00:53:47.358+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:53:47.515+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:53:47.527+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2024-10-14T00:53:47.613+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-14T00:53:47.613+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T00:53:47.613+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T00:53:47.625+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-14T00:53:47.626+05:30  INFO 23440 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 266 ms
+2024-10-14T00:53:47.668+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:53:47.670+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:53:47.685+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:53:47.686+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-14T00:53:47.694+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2699c6c1
+2024-10-14T00:53:47.694+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-14T00:53:47.754+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:53:47.754+05:30  INFO 23440 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:53:48.145+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T00:53:48.148+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-14T00:53:48.172+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-14T00:53:48.173+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-14T00:53:48.177+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#243731f3:0/SimpleConnection@3313219f [delegate=amqp://guest@127.0.0.1:5672/, localPort=60725]
+2024-10-14T00:53:48.177+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-14T00:53:48.186+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 0.84 seconds (process running for 64.386)
+2024-10-14T00:53:48.187+05:30  INFO 23440 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-14T00:54:05.758+05:30  INFO 23440 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-14T00:54:05.759+05:30  INFO 23440 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-14T00:54:06.332+05:30  INFO 23440 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-14T00:54:06.359+05:30  INFO 23440 --- [cem-automation] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:54:06.360+05:30  INFO 23440 --- [cem-automation] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-14T00:54:06.365+05:30  INFO 23440 --- [cem-automation] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-10-14T00:54:06.424+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 23440 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-14T00:54:06.424+05:30 DEBUG 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-14T00:54:06.424+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:54:06.580+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:54:06.593+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 5 JPA repository interfaces.
+2024-10-14T00:54:06.666+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-14T00:54:06.666+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T00:54:06.666+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T00:54:06.678+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-14T00:54:06.679+05:30  INFO 23440 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 253 ms
+2024-10-14T00:54:06.726+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:54:06.727+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:54:06.739+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:54:06.739+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-10-14T00:54:06.748+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b803386
+2024-10-14T00:54:06.748+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-10-14T00:54:06.791+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:54:06.791+05:30  INFO 23440 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:54:07.176+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T00:54:07.179+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-14T00:54:07.203+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-14T00:54:07.207+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 0.795 seconds (process running for 83.408)
+2024-10-14T00:54:07.208+05:30  INFO 23440 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-14T00:54:11.751+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-14T00:54:11.751+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-14T00:54:11.753+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-14T00:54:11.755+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-14T00:54:11.761+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#15aee54:0/SimpleConnection@2b4e7a48 [delegate=amqp://guest@127.0.0.1:5672/, localPort=60743]
+2024-10-14T00:54:11.762+05:30  INFO 23440 --- [cem-automation] [http-nio-8080-exec-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-14T00:54:35.363+05:30  INFO 23440 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-14T00:54:35.373+05:30  INFO 23440 --- [cem-automation] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:54:35.374+05:30  INFO 23440 --- [cem-automation] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-10-14T00:54:35.377+05:30  INFO 23440 --- [cem-automation] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-10-14T00:54:35.433+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 23440 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-14T00:54:35.434+05:30 DEBUG 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-14T00:54:35.434+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T00:54:35.573+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-14T00:54:35.585+05:30  INFO 23440 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2024-10-14T00:54:35.655+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-14T00:54:35.655+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-14T00:54:35.655+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-14T00:54:35.665+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-14T00:54:35.665+05:30  INFO 23440 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2024-10-14T00:54:35.711+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-14T00:54:35.712+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-14T00:54:35.725+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-14T00:54:35.725+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-10-14T00:54:35.733+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5697334f
+2024-10-14T00:54:35.733+05:30  INFO 23440 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-10-14T00:54:35.784+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-14T00:54:35.785+05:30  INFO 23440 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:54:36.156+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-14T00:54:36.159+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-14T00:54:36.182+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-14T00:54:36.183+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-14T00:54:36.187+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#6c69ed43:0/SimpleConnection@2b743954 [delegate=amqp://guest@127.0.0.1:5672/, localPort=60759]
+2024-10-14T00:54:36.188+05:30  INFO 23440 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-14T00:54:36.197+05:30  INFO 23440 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 0.774 seconds (process running for 112.398)
+2024-10-14T00:54:36.198+05:30  INFO 23440 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-14T00:54:52.461+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-10-14T00:54:52.463+05:30  INFO 23440 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-14T00:54:53.345+05:30  INFO 23440 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-14T00:54:53.357+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-14T00:54:53.357+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-10-14T00:54:53.360+05:30  INFO 23440 --- [cem-automation] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
