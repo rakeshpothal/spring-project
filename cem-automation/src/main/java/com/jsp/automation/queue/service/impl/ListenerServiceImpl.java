@@ -16,27 +16,30 @@ public class ListenerServiceImpl implements ListenerService {
 
 	@Autowired
 	private WorkFlowTransactionRepository workFlowTransactionRepository;
-	
+
 	@Autowired
 	private WorkflowTransactionService workflowTransactionService;
-	
+
 	@Override
 //	@RabbitListener(queues = RabbitMQueueConfig.QUEUE_NAME)
 	public void listenerEvent(WorkflowTransactionContext workflowTransactionContext) {
-		WorkFlowTransactionModel workFlowTransactionModel = workflowTransactionContext.getWorkFlowTransactionModel();
-		workFlowTransactionModel.setStstusFlag("INPROGRESS");
-		workFlowTransactionRepository.save(workFlowTransactionModel);
-		
-		workflowTransactionService.execute(workflowTransactionContext);
-		
-		
-		
+		try {
+			WorkFlowTransactionModel workFlowTransactionModel = workflowTransactionContext.getWorkFlowTransactionModel();
+			workFlowTransactionModel.setStstusFlag("INPROGRESS");
+			workFlowTransactionRepository.save(workFlowTransactionModel);
+			System.out.println("here");
+
+			workflowTransactionService.execute(workflowTransactionContext);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
 	}
-	
-	@RabbitListener(queues = RabbitMQueueConfig.QUEUE_NAME)
+
+//	@RabbitListener(queues = RabbitMQueueConfig.QUEUE_NAME)
 	public void listenerEventMessage(String message) {
-		System.out.println("message "+ message);
-		
+		System.out.println("message " + message);
+
 	}
 
 }

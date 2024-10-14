@@ -2,6 +2,7 @@ package com.jsp.automation.service.impl;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,11 @@ import org.springframework.stereotype.Service;
 import com.jsp.automation.dto.NodeConfig;
 import com.jsp.automation.dto.NodeExecutionContext;
 import com.jsp.automation.dto.WorkflowTransactionContext;
+import com.jsp.automation.entity.EntityModel;
+import com.jsp.automation.entity.WorkFlowEntity;
+import com.jsp.automation.queue.service.TriggerService;
+import com.jsp.automation.repository.EntityRepository;
+import com.jsp.automation.repository.WorkFlowRepository;
 import com.jsp.automation.service.DataManagerService;
 import com.jsp.automation.service.WorkflowTransactionService;
 @Service
@@ -16,6 +22,15 @@ public class WorkflowTransactionServiceImpl implements WorkflowTransactionServic
 	@Autowired
 	private DataManagerService dataManagerService;
 
+	@Autowired
+	private WorkFlowRepository workFlowRepository;
+	
+	@Autowired
+	private EntityRepository entityRepository;
+	
+	@Autowired
+	private TriggerService triggerService;
+	
 	@Override
 	public void execute(WorkflowTransactionContext context) {
 		List<NodeConfig> startNodeConfig = context.getWorkFlowEntity().getStartNodeConfig();
@@ -45,6 +60,21 @@ public class WorkflowTransactionServiceImpl implements WorkflowTransactionServic
 				context.getEntityModel().getStatusFieldValues(), nodeId));
 
 		return nodeExecutionContext;
+	}
+
+	@Override
+	public void processManualPush(Map<String, Object> data) {
+		String wfCode = data.get("wfCode").toString();
+		String wfId = data.get("wfid").toString();
+		String uniqueValue = data.get("uniqueValue").toString();
+		
+		
+		WorkFlowEntity wfEntity = workFlowRepository.findByWfCode(wfCode);
+		String entityCode = wfEntity.getEntityCode();
+		EntityModel entityModel = entityRepository.findByEntityCode(entityCode);
+		
+		
+		triggerService.triggerWorkFlow(wfEntity, entityModel, uniqueValue);
 	}
 
 }

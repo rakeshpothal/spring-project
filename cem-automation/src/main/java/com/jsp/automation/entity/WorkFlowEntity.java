@@ -1,5 +1,6 @@
 package com.jsp.automation.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
@@ -23,7 +24,7 @@ import lombok.Data;
 @Entity
 @Table(name = "cem_workflow_info")
 @Data
-public class WorkFlowEntity {
+public class WorkFlowEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "alt_key",columnDefinition = "BIGINT")

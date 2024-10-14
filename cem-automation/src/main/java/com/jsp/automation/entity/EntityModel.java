@@ -1,5 +1,6 @@
 package com.jsp.automation.entity;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
 
@@ -20,7 +21,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "entity_model_info")
-public class EntityModel {
+public class EntityModel implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,5 +1,6 @@
 package com.jsp.automation.dto;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.Map;
@@ -10,7 +11,7 @@ import com.jsp.automation.entity.NodeDetailsModel;
 import com.jsp.automation.entity.WorkFlowEntity;
 import com.jsp.automation.entity.WorkFlowTransactionModel;
 
-public class WorkflowTransactionContext implements Cloneable {
+public class WorkflowTransactionContext implements Cloneable, Serializable {
 
 	WorkFlowEntity workFlowEntity;
 	EntityModel entityModel;
@@ -23,6 +24,10 @@ public class WorkflowTransactionContext implements Cloneable {
 	NodeDetailsModel nextNodeConfig;
 	NodeExecutionContext currentNodeExecutionContext;
 	Map<String, NodeExecutionContext> currentNodeExucutionContextMap = new ConcurrentHashMap<String, NodeExecutionContext>();
+
+	
+	
+	
 
 	public void setWorkflowTransactionAltKey(BigInteger workflowTransactionAltKey) {
 		this.workflowTransactionAltKey = workflowTransactionAltKey;
@@ -130,6 +135,8 @@ public class WorkflowTransactionContext implements Cloneable {
 	public NodeExecutionContext getCurrentNodeExecutionContext() {
 		return currentNodeExecutionContext;
 	}
+
+	
 	
 	
 }
