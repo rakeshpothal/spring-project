@@ -66,12 +66,13 @@ public class TriggerServiceImpl implements TriggerService {
 	}
 
 	private void putIntoRabbitMQ(WorkflowTransactionContext workflowTransactionContext) {
+		System.out.println(workflowTransactionContext);
 		try {
 			rabbitTemplate.convertAndSend(rabbitMQueueConfig.EXCHANGE_NAME, rabbitMQueueConfig.ROUTING_KEY,
 					workflowTransactionContext);
 			System.out.println("success");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 

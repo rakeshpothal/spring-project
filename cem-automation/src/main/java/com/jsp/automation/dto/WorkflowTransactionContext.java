@@ -136,6 +136,17 @@ public class WorkflowTransactionContext implements Cloneable, Serializable {
 		return currentNodeExecutionContext;
 	}
 
+	@Override
+	public String toString() {
+		return "WorkflowTransactionContext [workFlowEntity=" + workFlowEntity + ", entityModel=" + entityModel
+				+ ", executionStart=" + executionStart + ", executionEnd=" + executionEnd + ", executionStatus="
+				+ executionStatus + ", remarks=" + remarks + ", workflowTransactionAltKey=" + workflowTransactionAltKey
+				+ ", workFlowTransactionModel=" + workFlowTransactionModel + ", nextNodeConfig=" + nextNodeConfig
+				+ ", currentNodeExecutionContext=" + currentNodeExecutionContext + "]";
+	}
+
+	
+
 	
 	
 	

@@ -64,10 +64,10 @@ public class WorkflowTransactionServiceImpl implements WorkflowTransactionServic
 
 	@Override
 	public void processManualPush(Map<String, Object> data) {
-		String wfCode = data.get("wfCode").toString();
-		String wfId = data.get("wfid").toString();
-		String uniqueValue = data.get("uniqueValue").toString();
 		
+		String wfCode = data.get("wfCode").toString();
+//		String wfId = data.get("wfId").toString();
+		String uniqueValue = data.get("uniqueValue").toString();
 		
 		WorkFlowEntity wfEntity = workFlowRepository.findByWfCode(wfCode);
 		String entityCode = wfEntity.getEntityCode();

@@ -16,6 +16,7 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
 public class RabbitMQueueConfig {
 	public static final String QUEUE_NAME = "myQueue";
@@ -53,9 +54,10 @@ public class RabbitMQueueConfig {
 
 	@Bean
 	public RabbitTemplate getRabbitTemplate(ConnectionFactory connectionFactory) {
-		 RabbitTemplate template = new RabbitTemplate(connectionFactory);
-//		 template.setMessageConverter(jackson2JsonMessageConverter());
-		 return template;
+		RabbitTemplate template = new RabbitTemplate(connectionFactory);
+		template.setMessageConverter(jackson2JsonMessageConverter());
+
+		return template;
 	}
 
 	@Bean
@@ -63,18 +65,19 @@ public class RabbitMQueueConfig {
 			ConnectionFactory connectionFactory) {
 		SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
 		factory.setConnectionFactory(connectionFactory);
+		factory.setMessageConverter(jackson2JsonMessageConverter());
 		return factory;
 	}
-	
+
 	@Bean
 	public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
-	    Jackson2JsonMessageConverter converter = new Jackson2JsonMessageConverter();
-	    DefaultJackson2JavaTypeMapper typeMapper = new DefaultJackson2JavaTypeMapper();
-	    typeMapper.addTrustedPackages("com.jsp.automation.dto");  // Add your package here
-	    typeMapper.addTrustedPackages("com.jsp.automation.entity");  // Add your package here
-	    converter.setJavaTypeMapper(typeMapper);
-	    return converter;
-	}
+		Jackson2JsonMessageConverter converter = new Jackson2JsonMessageConverter();
+		DefaultJackson2JavaTypeMapper typeMapper = new DefaultJackson2JavaTypeMapper();
+		typeMapper.addTrustedPackages("com.jsp.automation.dto"); // Add your package here
+		typeMapper.addTrustedPackages("com.jsp.automation.entity"); // Add your package here
+		converter.setJavaTypeMapper(typeMapper);
 
+		return converter;
+	}
 
 }

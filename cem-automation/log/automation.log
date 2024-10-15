@@ -1,0 +1,315 @@
+2024-10-15T14:03:35.357+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 22344 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-15T14:03:35.358+05:30 DEBUG 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-15T14:03:35.358+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T14:03:35.394+05:30  INFO 22344 --- [cem-automation] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-15T14:03:35.394+05:30  INFO 22344 --- [cem-automation] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-15T14:03:36.072+05:30  INFO 22344 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-15T14:03:36.121+05:30  INFO 22344 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2024-10-15T14:03:36.584+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-15T14:03:36.593+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T14:03:36.593+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T14:03:36.623+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-15T14:03:36.624+05:30  INFO 22344 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2024-10-15T14:03:36.764+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-15T14:03:36.796+05:30  INFO 22344 --- [cem-automation] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-15T14:03:36.815+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-15T14:03:37.020+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-15T14:03:37.037+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-15T14:03:37.252+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a19d804
+2024-10-15T14:03:37.254+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-15T14:03:37.859+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-15T14:03:37.861+05:30  INFO 22344 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T14:03:38.170+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-15T14:03:39.155+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-15T14:03:39.163+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-15T14:03:39.243+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-15T14:03:39.245+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-15T14:03:39.273+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#10e1e309:0/SimpleConnection@40f41e04 [delegate=amqp://guest@127.0.0.1:5672/, localPort=64962]
+2024-10-15T14:03:39.277+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-15T14:03:39.310+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 4.205 seconds (process running for 4.71)
+2024-10-15T14:03:39.452+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-15T14:03:39.452+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-15T14:03:39.453+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-15T14:03:49.695+05:30  WARN 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:158) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1682) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1604) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1592) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1583) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1528) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.13.4.jar:1.13.4]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1082) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1018) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1421) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:342) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:386) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:259) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 13 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8744] (through reference chain: com.jsp.automation.dto.WorkflowTransactionContext["currentNodeExecutionContext"])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:276) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:630) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:618) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:143) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3848) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-3.1.7.jar:3.1.7]
+	... 20 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+	at com.jsp.automation.dto.WorkflowTransactionContext.setCurrentNodeExecutionContext(WorkflowTransactionContext.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:141) ~[jackson-databind-2.17.2.jar:2.17.2]
+	... 28 common frames omitted
+
+2024-10-15T14:03:49.702+05:30  WARN 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@7271b758(byte[8784])' MessageProperties [headers={__TypeId__=com.jsp.automation.dto.WorkflowTransactionContext}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=myExchange, receivedRoutingKey=myRoutingKey, deliveryTag=1, consumerTag=amq.ctag-Y9zZX4yNRKlM9X5hcHi7ew, consumerQueue=myQueue])
+2024-10-15T14:03:49.703+05:30 ERROR 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1475) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1768) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1549) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.13.4.jar:1.13.4]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1082) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1018) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1421) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:158) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1682) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1604) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1592) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1583) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1528) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 8 common frames omitted
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:342) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:386) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:259) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 13 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8744] (through reference chain: com.jsp.automation.dto.WorkflowTransactionContext["currentNodeExecutionContext"])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:276) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:630) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:618) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:143) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3848) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-3.1.7.jar:3.1.7]
+	... 20 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+	at com.jsp.automation.dto.WorkflowTransactionContext.setCurrentNodeExecutionContext(WorkflowTransactionContext.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:141) ~[jackson-databind-2.17.2.jar:2.17.2]
+	... 28 common frames omitted
+
+2024-10-15T14:04:57.527+05:30  INFO 22344 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-15T14:04:57.531+05:30  INFO 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-15T14:04:58.332+05:30  INFO 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-15T14:04:58.353+05:30  INFO 22344 --- [cem-automation] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T14:04:58.354+05:30  INFO 22344 --- [cem-automation] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-15T14:04:58.360+05:30  INFO 22344 --- [cem-automation] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-15T14:04:58.423+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 22344 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-15T14:04:58.423+05:30 DEBUG 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-15T14:04:58.423+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T14:04:58.614+05:30  INFO 22344 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-15T14:04:58.634+05:30  INFO 22344 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+2024-10-15T14:04:58.731+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-15T14:04:58.732+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T14:04:58.732+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T14:04:58.743+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-15T14:04:58.743+05:30  INFO 22344 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 319 ms
+2024-10-15T14:04:58.790+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-15T14:04:58.791+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-15T14:04:58.823+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-15T14:04:58.823+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-15T14:04:58.837+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d9b681d
+2024-10-15T14:04:58.837+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-15T14:04:58.915+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-15T14:04:58.915+05:30  INFO 22344 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T14:04:59.407+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-15T14:04:59.412+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-15T14:04:59.444+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-15T14:04:59.445+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-15T14:04:59.449+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#4e6a969e:0/SimpleConnection@63ef817e [delegate=amqp://guest@127.0.0.1:5672/, localPort=65127]
+2024-10-15T14:04:59.451+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-15T14:04:59.463+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 1.056 seconds (process running for 84.864)
+2024-10-15T14:04:59.465+05:30  INFO 22344 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-15T14:05:00.816+05:30  INFO 22344 --- [cem-automation] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-15T14:05:00.820+05:30  INFO 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-15T14:05:01.468+05:30  INFO 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-15T14:05:01.476+05:30  INFO 22344 --- [cem-automation] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T14:05:01.476+05:30  INFO 22344 --- [cem-automation] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-15T14:05:01.482+05:30  INFO 22344 --- [cem-automation] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-15T14:05:01.544+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Starting CemAutomationApplication using Java 21.0.3 with PID 22344 (D:\java_1\cem-automation\target\classes started by bhagy in D:\java_1\cem-automation)
+2024-10-15T14:05:01.544+05:30 DEBUG 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-15T14:05:01.544+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T14:05:01.701+05:30  INFO 22344 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-15T14:05:01.714+05:30  INFO 22344 --- [cem-automation] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 5 JPA repository interfaces.
+2024-10-15T14:05:01.790+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-15T14:05:01.790+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T14:05:01.790+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T14:05:01.801+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring embedded WebApplicationContext
+2024-10-15T14:05:01.801+05:30  INFO 22344 --- [cem-automation] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 256 ms
+2024-10-15T14:05:01.843+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-15T14:05:01.844+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-15T14:05:01.860+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-15T14:05:01.861+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-15T14:05:01.870+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27e959d7
+2024-10-15T14:05:01.870+05:30  INFO 22344 --- [cem-automation] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-15T14:05:01.932+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-15T14:05:01.932+05:30  INFO 22344 --- [cem-automation] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T14:05:02.355+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-15T14:05:02.357+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-15T14:05:02.385+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/automation'
+2024-10-15T14:05:02.386+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2024-10-15T14:05:02.406+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: getConnectionFactory#44d2c17f:0/SimpleConnection@1b9b5194 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65144]
+2024-10-15T14:05:02.407+05:30  INFO 22344 --- [cem-automation] [restartedMain] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2024-10-15T14:05:02.426+05:30  INFO 22344 --- [cem-automation] [restartedMain] c.j.automation.CemAutomationApplication  : Started CemAutomationApplication in 0.895 seconds (process running for 87.826)
+2024-10-15T14:05:02.427+05:30  INFO 22344 --- [cem-automation] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-15T14:05:04.584+05:30  INFO 22344 --- [cem-automation] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/automation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-15T14:05:04.584+05:30  INFO 22344 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-15T14:05:04.585+05:30  INFO 22344 --- [cem-automation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-15T14:05:04.635+05:30  WARN 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] s.a.r.l.ConditionalRejectingErrorHandler : Execution of Rabbit message listener failed.
+
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:158) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1682) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1604) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1592) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1583) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1528) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.13.4.jar:1.13.4]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1082) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1018) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1421) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:342) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:386) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:259) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 13 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8744] (through reference chain: com.jsp.automation.dto.WorkflowTransactionContext["currentNodeExecutionContext"])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:276) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:630) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:618) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:143) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3848) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-3.1.7.jar:3.1.7]
+	... 20 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+	at com.jsp.automation.dto.WorkflowTransactionContext.setCurrentNodeExecutionContext(WorkflowTransactionContext.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:141) ~[jackson-databind-2.17.2.jar:2.17.2]
+	... 28 common frames omitted
+
+2024-10-15T14:05:04.636+05:30  WARN 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] ingErrorHandler$DefaultExceptionStrategy : Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@4a18f9e1(byte[8784])' MessageProperties [headers={__TypeId__=com.jsp.automation.dto.WorkflowTransactionContext}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=myExchange, receivedRoutingKey=myRoutingKey, deliveryTag=1, consumerTag=amq.ctag-FlNhJ8KBtf_wRuMti03cIQ, consumerQueue=myQueue])
+2024-10-15T14:05:04.636+05:30 ERROR 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Execution of Rabbit message listener failed, and the error handler threw an exception
+
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1475) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1768) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1549) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at io.micrometer.observation.Observation.observe(Observation.java:499) ~[micrometer-observation-1.13.4.jar:1.13.4]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1506) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:1082) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:1018) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1421) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Failed to convert message
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:158) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1682) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1604) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1592) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1583) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1528) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 8 common frames omitted
+Caused by: org.springframework.amqp.support.converter.MessageConversionException: Failed to convert Message content
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:367) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:321) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.fromMessage(AbstractJackson2MessageConverter.java:304) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener.extractMessage(AbstractAdaptableMessageListener.java:342) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter$MessagingMessageConverterAdapter.extractPayload(MessagingMessageListenerAdapter.java:386) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.MessagingMessageConverter.fromMessage(MessagingMessageConverter.java:132) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.toMessagingMessage(MessagingMessageListenerAdapter.java:259) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:148) ~[spring-rabbit-3.1.7.jar:3.1.7]
+	... 13 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 8744] (through reference chain: com.jsp.automation.dto.WorkflowTransactionContext["currentNodeExecutionContext"])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:276) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:630) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty._throwAsIOE(SettableBeanProperty.java:618) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:143) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:399) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3848) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertBytesToObject(AbstractJackson2MessageConverter.java:428) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.convertContent(AbstractJackson2MessageConverter.java:395) ~[spring-amqp-3.1.7.jar:3.1.7]
+	at org.springframework.amqp.support.converter.AbstractJackson2MessageConverter.doFromMessage(AbstractJackson2MessageConverter.java:364) ~[spring-amqp-3.1.7.jar:3.1.7]
+	... 20 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "com.jsp.automation.dto.NodeExecutionContext.getNodeId()" because "currentNodeExecutionContext" is null
+	at com.jsp.automation.dto.WorkflowTransactionContext.setCurrentNodeExecutionContext(WorkflowTransactionContext.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:141) ~[jackson-databind-2.17.2.jar:2.17.2]
+	... 28 common frames omitted
+
+2024-10-15T14:07:48.486+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-10-15T14:07:48.488+05:30  INFO 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2024-10-15T14:07:49.033+05:30  INFO 22344 --- [cem-automation] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2024-10-15T14:07:49.042+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-15T14:07:49.043+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-15T14:07:49.047+05:30  INFO 22344 --- [cem-automation] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

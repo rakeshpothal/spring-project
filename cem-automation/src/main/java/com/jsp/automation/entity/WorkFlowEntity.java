@@ -2,6 +2,7 @@ package com.jsp.automation.entity;
 
 import java.io.Serializable;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -61,16 +62,26 @@ public class WorkFlowEntity implements Serializable {
 	private Date modifiedDate;
 	
 	@Transient
-	List<NodeDetailsModel> nodeDetails;
+	List<NodeDetailsModel> nodeDetails = new ArrayList<>();
 	
 	public List<NodeConfig> getStartNodeConfig() {
-		List<NodeDetailsModel> nodeConfig = nodeDetails.stream().filter(each->each.getNodeType().toLowerCase().equals("start")).collect(Collectors.toList());
-		return new NodeConfigBuilder().getNodeConfig(nodeConfig);
+		try {
+			List<NodeDetailsModel> nodeConfig = nodeDetails.stream().filter(each->each.getNodeType().toLowerCase().equals("start")).collect(Collectors.toList());
+			return new NodeConfigBuilder().getNodeConfig(nodeConfig);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	public List<NodeConfig> getAllNodeConfig() {
-		List<NodeConfig> nodeConfig = new NodeConfigBuilder().getNodeConfig(nodeDetails);
-		return nodeConfig;
+		try {
+			List<NodeConfig> nodeConfig = new NodeConfigBuilder().getNodeConfig(nodeDetails);
+			return nodeConfig;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }
